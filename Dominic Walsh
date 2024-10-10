@@ -1,0 +1,85 @@
+#Lesson 1 ----------------------------//
+#Starter Task ----------------------------//
+
+# tries = 3
+
+# username = "admin1"
+# password = "Password123"
+
+# while tries > 0:
+#     usernameInput = str(input("Enter the username for this account : "))
+#     while not usernameInput == username:
+#         usernameInput = str(input("Enter the correct username within the libary, Try again : "))
+#     else:
+#         print("Username Is correct")
+
+#     passwordInput = str(input("Enter the password for this account : "))
+#     while not passwordInput == password:
+#         if tries >= 1:    
+#             tries -= 1
+#             usernameInput = str(input(f"Enter the correct password to the account, you currently have {tries}, Try again : "))
+#             continue
+#         else:
+#             print(f"You have been locked out! you currently have {tries} left.")
+#             print("Logging you out.")
+#             break
+#     else:
+#         print("Password Is correct")
+#         print("...")
+#         print("\-- Logging In --//")
+#         print("...")
+#         print(":) Completed (:")
+#         print(f"Welcome {username}")
+#         break
+
+# Nested For Task ----------------------------//
+# userInput = int(input("Enter the number to print the amount of stars: "))
+# for outter in range(0, userInput,1):
+#     for inner in range(0, outter+1,1):
+#         print("*", end="")
+#     print("")
+
+
+# Lesson 2 ----------------------------//
+# (Nested star task but a while loop)
+# outter = 0
+# userInput1 = int(input("Enter number to print the stars amount: "))
+# while outter < userInput1:
+#     inner = 0
+#     while inner < outter+1:
+#         print("*", end="")
+#         inner += 1
+#     print("")
+#     outter += 1
+
+# Break and continue statements ----------------------------//
+# for index in range(0,5,1):
+#     if index == 3:
+#         break
+#     print("Hello World!")
+
+# Create python programs with loops ----------------------------//
+
+#Task 1 ----------------------------//
+# for number in range(1, 21):
+#     if number % 2 == 0:
+#         print(number)
+
+#Task 2
+# factorialAns = 1
+# numberinput = int(input("Enter a number to find the factorial version of it : "))
+# for index in range(numberinput, 0, -1):
+#     factorialAns *= index
+
+# print(factorialAns)
+
+#Task 3 (without using a loop)
+def factorial(n):
+    if n == 0 or n == 1:
+        return 1
+    else:
+        return n * factorial(n - 1)
+
+numberinput = int(input("Enter a number to find the factorial of it: "))
+factorialAns = factorial(numberinput)
+print(f"The factorial of {numberinput} is {factorialAns}")
