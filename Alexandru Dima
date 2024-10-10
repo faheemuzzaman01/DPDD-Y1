@@ -1,0 +1,29 @@
+username = "alexandrudima08"
+password = "newcastlecoll"
+
+userinput= str(input("Hello please enter your user nsme to enter the program"))
+passinput = str(input("please enter your password"))
+
+if userinput == username:
+    print("Thank you")
+else:
+    print("Sorry ")
+
+if passinput == password:
+    print("Acsess")
+else:
+    ("we do not reconise that password try agian")
+
+userinput3= str(input("Hello please enter your user nsme to enter the program"))
+passinput3 = str(input("please enter your password"))
+
+if userinput3 == username:
+    print("Thank you")
+else:
+    print("Sorry ")
+
+if passinput3 == password:
+    print("Acsess")
+else:
+    ("Sorry the amount you tried is now reached")
+
