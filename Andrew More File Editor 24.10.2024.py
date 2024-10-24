@@ -68,13 +68,25 @@ def ErasingFile():
     finally:
         mainmenu()
 
+def ReadingFile():
+    FileName = str(input("Enter file name you want to read: "))
+    try:
+        file = open(f"{FileName}.txt", "r")
+        print(file)
+        file.close()
+    except FileNotFoundError:
+        print("File not found!")
+    finally:
+        mainmenu()
+
 def mainmenu():
     selection = int(input("""
 1: Creating File
 2: Writing to file (will erase contents)
 3: Appending to file
 4: Erasing file
-5: Exit program
+5: Reading file
+6: Exit program
 """))
     try:
         if selection == 1:
@@ -86,6 +98,8 @@ def mainmenu():
         elif selection == 4:
             ErasingFile()
         elif selection == 5:
+            ReadingFile()
+        elif selection == 6:
             print("Goodbye!")
             exit()
         else:
