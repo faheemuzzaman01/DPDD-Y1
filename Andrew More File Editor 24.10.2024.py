@@ -1,5 +1,7 @@
 import os
+
 def CreatingFile():
+
     FileName = str(input("Enter new file name: "))
     try:
         file = open(f"{FileName}.txt", "w")
@@ -72,7 +74,9 @@ def ReadingFile():
     FileName = str(input("Enter file name you want to read: "))
     try:
         file = open(f"{FileName}.txt", "r")
-        print(file)
+        lines = file.readlines()
+        for line in lines:
+            print(line)
         file.close()
     except FileNotFoundError:
         print("File not found!")
@@ -103,7 +107,7 @@ def mainmenu():
             print("Goodbye!")
             exit()
         else:
-            print("You must enter a number between 1-5!")
+            print("You must enter a number between 1-6!")
     except ValueError:
         print("That is not a number!")    
 
