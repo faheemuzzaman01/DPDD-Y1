@@ -1,0 +1,52 @@
+# starter 
+
+ 
+ 
+
+#reads and displays the content in the file 
+
+with open("example.txt", "r") as file: 
+     lines = file.readlines() 
+
+     for line in lines: 
+        print(line) 
+
+#takes an input of what you want to put into the file and adds it to the file 
+
+file = open("example.txt", "a") 
+
+lines = int(input("How many lines of data do you want to input? ")) 
+
+for i in range(lines):  
+   name = input("Enter the content you want saving to the file: ")  
+
+   file.write(name)  
+   file.write("\n")  
+file.close()  
+
+print("\nData Saved Successfully!")  
+
+ 
+ 
+
+num3 = float(input("enter your first number: "))
+num4 = float(input("enter your second number: ")) 
+
+def divide_numbers(num1, num2): 
+    try: 
+        # Attempt to perform division 
+        result = num1 / num2 
+    except ZeroDivisionError: 
+        return "Error: Cannot divide by zero." 
+    except TypeError: 
+return "Error: Non-numeric input detected. Please provide numbers." 
+    else: 
+       return result 
+
+
+# Example usage 
+
+print(divide_numbers(num3, num4))    # Should return the correct output, if possible 
+
+finally:
+print("thank you for using this progam.")
