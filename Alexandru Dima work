@@ -1,0 +1,75 @@
+# number = int(input("please enter the number you want to use: "))
+# def factorial (number):
+#     result = 1
+#     for i in range(number,0,-1):
+#         result *= i
+#         return result
+#     answer = factorial(result)
+#     print(answer)
+
+# factorial()
+
+# def inputdata():
+#     name = input("Enter your name: ")
+#     return name
+
+# def processdata(name):
+#     return name.upper()
+
+# def outputdata (name):
+#     print("Hello,"+ name +"!")
+    
+# name = inputdata()
+# name = processdata(name)
+# outputdata(name)
+
+
+
+
+
+# def name():
+#     name = input("Please input your name: ")
+#     return name
+# print(name())
+
+# def number():
+#     number1 =int(input("hat is the first number you want to subtract: "))
+#     number2 =int(input("hat is the first number you want to subtract: "))
+#     answer = number1 - number2
+#     print(answer)
+#     return answer
+
+#area---------------------------------------------------------------------------------------------------------
+
+# def area():
+#     lenght = int(input("Please input the lenght: "))
+#     width = int(input("Please input the with: "))
+#     area = lenght * width
+#     return area
+
+# print(area())
+
+# perimeter-----------------------------------------------------------------------------------------------------
+
+# def prem():
+#     length = int(input("Please input the length: "))
+#     width = int(input("Please enter the width: "))
+#     prem = length + width * 2
+#     return prem
+
+# print(prem())
+
+def fn_rec(num):
+    if num == 10:
+        return num
+    else:
+        print("Hello")
+        return fn_rec(num+1)
+
+print(fn_rec(0))
+
+
+
+
+
+ 
