@@ -1,0 +1,57 @@
+def input_data():
+    name = input("enter your name: ")
+    return name
+
+def process_data(name):
+    return name.upper()
+
+def output_data(name):
+    print("hello," + name + "!")
+
+name = input_data()
+name = process_data(name)
+output_data(name)
+
+
+def fn_sub(num01,num02):
+    print(num01-num02)
+
+def fn_mult(num01,num02):
+    print(num01*num02)
+
+
+def input_data():
+    name = input("enter your Name: ")
+    return name
+
+fn_sub(10,3)
+fn_mult(10,3)
+
+print(input_data())
+
+
+
+def fn_mult(num01, num02):
+    print("the perimeter is", 2*num01+num02)
+    return num01, num02
+
+fn_mult(14, 5)
+
+print("")
+
+def fn_mult(num1, num2):
+    print("the area is", num1*num2)
+
+fn_mult(14, 5)
+
+
+
+
+def fn_rec(num):
+    if num == 10:
+        return num
+    else:
+        print("hello")
+        return fn_rec(num+1)
+    
+print(fn_rec(0))
