@@ -1,0 +1,13 @@
+# Task 4: -----------------------------//
+for i in range(1,11):
+    print(f"2 * {i} = {2*i}")
+
+# Main Task ------------------------------//
+def area_cal(Length, Width):
+    print(f"Calculating {Length} x {Width}")
+    Area = Length * Width
+
+    return Area
+
+Area = area_cal(Length = int(input("Enter the length")), Width = int(input("Enter the width")))
+print(f"The perimeter of this shape is {Area}.")
