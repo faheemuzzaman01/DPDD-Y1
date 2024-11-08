@@ -1,0 +1,58 @@
+# import math
+# def factorial(n):
+#     if n < 0:
+#         raise ValueError("Factorial is not dfeined for negative  numbers")
+#     return math.factorial(n)
+# print(factorial( 5))
+# import requests
+# #r = request.get(hfhf)
+# print(r.text    ))
+
+
+# def input_data():
+#     ​name = input("Enter your name: ")​
+#      return name​
+
+# def process_data(name):​
+
+#     return name.upper()​
+
+# def output_data(name):​
+
+#     print("Hello, " + name + "!")​
+
+# name = input_data()​
+
+# name = process_data(name)​
+
+# output_data(name)​
+# def subt(a, b):
+#     return(a - b)
+# print(subt(6, 2))
+# def mult(c, d):
+#      return(c * d)
+# print(mult(int(input("enter the first number:")), int(input("enter the second number"))))
+# def name():
+#     sam = input("please enter your name")
+#     return sam
+# print(name())
+
+# length = int(input("Enter a number:"))
+# width = int(input("Enter a number please:"))
+# def par():
+#     solution = length + width
+#     parameter = 2 * solution
+#     return parameter
+# print(par()) 
+# def area():
+#     multiplication = width * length
+#     return multiplication
+# print(area())
+def fn_rec(num):
+    if num ==10:
+        return num 
+    else:
+         globalsumi = 2 * num
+         return fn_rec(sumi)
+fn_rec(1)
+print(f"{fn_rec(1)} = {sumi}")
