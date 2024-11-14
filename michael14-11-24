@@ -1,0 +1,30 @@
+def add1(a, b):
+     return a + b
+
+# def sub1(c, d):
+#     return c - d
+
+# import unittest
+
+# class TestSum(unittest.TestCase):
+#     def test_add_sub(self):
+#         self.assertEqual(add1(2, 5), 7, "Should be 7")
+        
+#     def testt(self):
+#         self.assertEqual(sub1(8, 2), 1, "Should be 6")
+
+# if __name__ == "__main__":
+#     unittest.main()
+#     print("Everything passed")
+# import logging
+# logging.basicConfig(filename= 'mike.log', level= logging.ERROR)
+# try:
+#     assert add1(3, 5) == 84, "Should be 8"
+# except AssertionError:
+
+with open("large_file.txt", "r") as file:
+    while chunk := file.read(1024):
+        print(chunk)
+with open('image.png', 'rb') as file:
+    binary_data = file.read() 
+    print("Binary",binary_data)
