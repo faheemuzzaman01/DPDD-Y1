@@ -1,0 +1,76 @@
+# import unittest
+
+# def my_function(a, b):
+#     return a + b
+
+# class TestMyFunction(unittest.TestCase):
+#     def test_case_1(self):
+#         self.assertEqual(my_function(1, 2), 3)
+    
+#     def test_case_2(self):
+#         self.assertNotEqual(my_function(1, 2), 4)
+
+# if __name__ == '__main__':
+#     unittest.main()
+
+    
+# def my_function(a, b):
+#     return a - b
+
+# class TestMyFunction(unittest.TestCase):
+#     def test_case_1(self):
+#         self.assertEqual(my_function(1, 2), 3)
+    
+#     def test_case_2(self):
+#         self.assertNotEqual(my_function(1, 2), 4)
+
+# if __name__ == '__main__':
+#     unittest.main()
+
+
+
+# def my_function(a, b):
+#     return a * b
+
+# class TestMyFunction(unittest.TestCase):
+#     def test_case_1(self):
+#         self.assertEqual(my_function(1, 2), 3)
+    
+#     def test_case_2(self):
+#         self.assertNotEqual(my_function(1, 2), 4)
+
+# if __name__ == '__main__':
+#     unittest.main()
+
+# def my_function(a, b):
+#     return a / b
+
+# class TestMyFunction(unittest.TestCase):
+#     def test_case_1(self):
+#         self.assertEqual(my_function(1, 2), 3)
+    
+#     def test_case_2(self):
+#         self.assertNotEqual(my_function(1, 2), 4)
+
+# if __name__ == '__main__':
+#     unittest.main()
+
+
+# with open("large_file.txt", "r") as file:
+#     while chunk := file.read(1024):
+#         print(chunk)
+
+
+
+# with open("jetpack.png", "rb") as file:
+#     binary_data = file.read()
+
+# except FileNotFoundError:
+# print("file not found.")
+
+
+
+# try:
+#     file = open("nonexistent.txt", "r")
+# except FileNotFoundError:
+#     print("file not found")
