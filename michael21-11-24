@@ -1,0 +1,60 @@
+# def linear(item, search):       
+#     index = 0
+#     listIndex = []    
+#     while index < len(item) : for number in listIndex
+#         if item[index] == search:   if number == search
+#             listIndex.append(index)   count +=1
+#         index +=1                     list.append(index)
+#     if listIndex == []:            index +=1
+#         return -1               if listIndex == []
+#     else:                           return -1
+#         return listIndex           else
+# search = int(input("Enter the number you wish to serch for")) return listindex
+# item = [15, 9, 27, 34, 6, 12, 27]
+# print(linear(item, search))
+
+# listNumber = []
+
+# def binary(search, item):
+#     first = 0
+#     index = 0
+#     global listNumber
+#     last = len(item) - 1
+#     while first <= last :
+#         midpoint = (first + last)//2
+#         if item[midpoint] == search:            
+#             # listNumber.append(midpoint)
+#             binary(search, item[midpoint+1:len(item)])
+#             listNumber.append(midpoint)
+#             return midpoint            
+#         elif item[midpoint] < search:
+#             first = midpoint + 1
+#         else:
+#             last = midpoint - 1
+#     if listNumber == []:
+#         return -1
+#     else:
+#         return listNumber
+# # search = int(input("what number are you searching for"))
+# item = [-1, 3,3, 4, 4,5, 5,6,9,10,12,12]
+# print(binary(3, sorted(item)))
+# print(listNumber)
+# # print(max(listNumber))
+# #for multiple values 
+# def fn_recursive_binary_search(listNumber,searchValue, left, right):
+ 
+#     if left > right:
+#         return -1
+#     mid = (left + right) // 2
+#     if listNumber[mid] == searchValue:
+#         return mid
+#     elif listNumber[mid] > searchValue:
+#         return fn_recursive_binary_search(listNumber, searchValue, left, mid - 1)
+#     else:
+#         return fn_recursive_binary_search(listNumber, searchValue, mid + 1, right)
+   
+ 
+# list_number = [12,13,2,5,8,6,4,10]
+# list_number = sorted(list_number)
+ 
+# print(fn_recursive_binary_search(list_number, 12, 0, len(list_number)-1))
