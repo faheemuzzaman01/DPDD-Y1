@@ -1,0 +1,39 @@
+# --------------------------------------//
+# Linear search
+
+# num_list = [15,9,27,34,6,12]
+
+# def linear_search(items, search_item):
+#     index = -1
+#     current = 0
+#     Found = False
+#     while current < len(items) and Found == False:
+#         if items[current] == search_item:
+#             index = current
+#             Found = True
+#         current += 1
+#     return index
+
+# user_input = int(input("Enter a number:"))
+# print(linear_search(items=num_list, search_item=user_input))
+
+
+#=================================================
+# Binary method (for loop)
+
+def fn_binary_search_for_loop(listNumber, searchValue):
+    left = 0
+    right = len(listNumber) - 1
+    for _ in range(len(listNumber)):  # Loop up to the size of the list
+        if left > right:  # If the search space is empty
+            break
+        mid = (left + right) // 2
+        if listNumber[mid] == searchValue:
+            return mid
+        elif listNumber[mid] < searchValue:
+            left = mid + 1
+        else:
+            right = mid - 1
+    return -1
+
+print(fn_binary_search_for_loop(sorted([2,4,6,8,10,12,14]),10))
