@@ -1,0 +1,72 @@
+# def linear_search(listNumber, searchValue):
+#     count = 0
+#     index = 0
+#     listIndex= []
+#     for number in listNumber:
+#         if number == searchValue:
+#             count += 1
+#             listIndex.append(index)
+#         index += 1
+
+#     if listIndex == []:
+#         return -1
+#     else:
+#         return listIndex
+    
+# print(linear_search(sorted([24,12,45,78,98,6]),45))
+
+# def fn_binary_search(listNumber,searchValue):
+#     left = 0
+#     right = len(listNumber) -1
+#     while left <= right:
+#         mid = (left + right) // 2
+#         if listNumber[mid] == searchValue:
+#             return mid
+#         elif listNumber[mid] < searchValue:
+#             left = mid + 1
+#         else:
+#             right = mid - 1
+#     return - 1
+# print(fn_binary_search(sorted([24,12,45,78,98,6]),45))
+
+# def recuesive_binary_search(listNumber, searchvalue, left, right):
+#     if left> right:
+#         return - 1
+#     mid = (left + right) //2
+#     if listNumber[mid] == searchvalue:
+#         return mid
+#     elif listNumber[mid] > searchvalue:
+
+
+# global number
+# number = 10
+# def binary(item, search, number):
+#     left = 0
+#     right = len(item) - 1
+#     for number in item:
+#         if number == search:
+#             mid = (left + right) // 2
+#             if item[mid] == search:
+#                 return mid
+#             elif item[mid] < search:
+#                 left = mid + 1
+#             else:
+#                 right = mid - 1
+#         return - 1
+# print(binary(sorted([24,12,45,10,98,6]),10))
+
+def fn_binary_search_for_loop(listNumber, searchValue):
+    left = 0
+    right = len(listNumber) - 1
+    for _ in range(len(listNumber)):  # Loop up to the size of the list
+        if left > right:  # If the search space is empty
+            break
+        mid = (left + right) // 2
+        if listNumber[mid] == searchValue:
+            return mid
+        elif listNumber[mid] < searchValue:
+            left = mid + 1
+        else:
+            right = mid - 1
+    return -1
+
