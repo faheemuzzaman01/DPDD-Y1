@@ -28,30 +28,34 @@ def InsertionSort(items):
     print(f"Sorted lits is {items}") 
 
 
-def MergeSort(items):
-    if len(items) > 1:
-        mid = len(items) // 2
-        left_half = items[:mid:]
-        right_half = items[mid:]
+def MergeSort(listNumber):
+    if len(listNumber) > 1:
+        mid = len(listNumber) // 2
+        left_half = listNumber[:mid]
+        right_half = listNumber[:mid]
+
         MergeSort(left_half)
         MergeSort(right_half)
+
         i = j = k = 0
         while i < len(left_half) and j < len(right_half):
             if left_half[i] < right_half[j]:
-                items[k] = left_half[i]
-                i += 1
+                listNumber[k] = left_half[i]
+                i += 1 
             else:
-                items[k] = right_half[j]
+                listNumber[k] = right_half[j]
+                j += 1
             k += 1
+
         while i < len(left_half):
-            items[k] = left_half[i]
+            listNumber[k] = left_half[i]
             i += 1
             k += 1
-        while i < len(right_half):
-            items[k] = right_half[j]
+
+        while j < len(right_half):
+            listNumber[k] = right_half[j]
             j += 1
             k += 1
-    print(items)    
 
 def SelectionSort(array, size):
     for ind in range(size):
