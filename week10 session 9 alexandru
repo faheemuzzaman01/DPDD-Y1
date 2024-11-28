@@ -1,0 +1,68 @@
+# import random as rand
+
+# def binary_search (num, search):
+#     index = -1
+#     first = 0
+#     last = len(num) -1
+#     found = False
+
+#     while first <= last and found == False:
+#         midpoint = (first + last) // 2
+#         if num[midpoint] == search:
+#             index = midpoint
+#             found = True
+#         elif num[midpoint] < search:
+#             first = midpoint + 1
+#         else:
+#             last = midpoint -  1
+#         return index
+    
+# numbers = list(range(101))
+# ans = int(input("Please Guess a number between 0- 100: "))
+# random = rand.randint()
+
+# final = binary_search(num=numbers, search=ans)
+# if final == ans:
+#     print("correct")
+# elif final > ans:
+#     print("too high")
+# else:
+#     print("Too low")
+# ============================================================================
+
+#Fahim code 
+
+# def binary_game():
+#     print("Think of a number between 1-100: ")
+
+#     low = 0
+#     high = 100
+#     attmpts = 0
+
+#     while low <= high:
+#         attmpts += 1
+#         guess = (low + high) // 2
+#         print(f"My guess {guess}")
+
+#         feedback = input("""
+#     it is correct
+#      higher(h)
+#      correct(c)
+
+# """)
+#===========================================================================
+# def insertion_code(arr):
+#     for i in range(1, len(arr)):
+#         key = arr[i]
+#         j = i - 1
+#         while j >= 0 and arr[j] > key:
+#             arr[j + 1] = arr[j]
+#             j -= 1
+#         arr[j + 1] = key
+#     return arr
+# print(insertion_code([5, 2, 9, 1, 5, 6]))        
+
+#==========================================================================
+# def fn_merge_sort(listNumber):
+#     if len(listNumber) > 1:
+#         mid =
