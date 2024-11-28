@@ -1,0 +1,55 @@
+#=========================================\\
+# Insertion Sort
+#=========================================//
+
+# def fn_insertion_sort(listNumber):
+#     for i in range(1,len(listNumber)):
+#         key = listNumber[i]
+#         j = i -1
+#         while j >= 0 and listNumber[j] > key:
+#             listNumber[j+1] = listNumber[j]
+#             j -= 1
+#         listNumber[j+1] = key
+#     return listNumber
+
+# listNum = [3,4,8,5]
+# print(fn_insertion_sort(listNumber=listNum))
+
+#=========================================\\
+# Merge Sorting
+#=========================================//
+
+def fn_merge_sort(listNumber):
+    if len(listNumber) > 1:
+        mid = len(listNumber) // 2
+        left_half = listNumber[:mid]
+        right_half = listNumber[mid:]
+
+        fn_merge_sort(left_half)
+        fn_merge_sort(right_half)
+
+        i = j = k = 0
+
+        while i < len(left_half) and j < len(right_half):
+            if left_half[i] < right_half[j]:
+                listNumber[k] = left_half[i]
+                i += 1
+            else:
+                listNumber[k] = right_half[j]
+                j += 1
+            k += 1
+        
+        while i < len(left_half):
+            listNumber[k] = left_half[i]
+            i += 1
+            k += 1
+            
+        while j < len(right_half):
+            listNumber[k] = right_half[j]
+            j += 1
+            k += 1
+
+
+data = [3,1,5,8,7,6]
+fn_merge_sort(data)
+print(data) 
