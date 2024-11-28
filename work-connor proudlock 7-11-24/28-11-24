@@ -1,0 +1,122 @@
+import random
+import os
+import time
+
+def clear():
+    os.system("cls")
+
+def main():
+    list_=list(range(1,101))
+    chosen=random.choice(list_)
+    run=True
+    while run == True:
+        try:
+            choice = int(input("enter your guess!"))
+        except ValueError:
+            print("Error! maybe you didn't enter an integer!")
+            main()
+        try:
+            if choice == chosen:
+                clear()
+                print(f"{choice} was correct! well done!")
+                run=False
+                time.sleep(1)
+            elif choice > chosen:
+                clear()
+                print(f"{choice} was too high")
+                list_ = list_[0: list_.index(choice)]
+                time.sleep(1)
+            elif choice < chosen:
+                clear()
+                print(f"{choice} was too low")
+                list_ = list_[list_.index(choice)+1:]
+                time.sleep(1)
+        except ValueError:
+            print("Error, you already chose this number, therefore...\nGame Over")
+    rerun()
+# main()
+def rerun():
+    clear(); run = int(input("would you like to try again?\n1. Yes\n2. No"))
+    match run:
+        case 1:
+            clear(); print("restarting..."); main()
+        case 2:
+            clear(); print("exiting"); exit()
+# |
+# |
+# |
+# FAHIMS VERSION
+
+# def fn_binary_game():
+#     low = 0
+#     high = 100
+#     attempts = 0
+
+#     while low<= high:
+#         attempts += 1
+#         guess = (low + high) // 2
+#         print(f"Users Guess is {guess}")
+
+#         feedback = input("""
+#     it is correct (c)
+#     too high (h)
+#     too low (l)
+
+# """)
+#         if feedback == "c":
+#             print(f"Guessed number in {attempts}")
+#             break
+#         elif feedback == "l":
+#             high = guess - 1
+#         elif feedback == "h":
+#             low = guess + 1
+#         else:
+#             print("invalid input")
+
+#     print("Somthing did not go correctly as planned.")
+
+
+# fn_binary_game()
+
+# def fn_insertion_sort(listNumber):
+#     for i in range(1, len(listNumber)):
+#         key = listNumber[i]
+#         j=i-1
+#         while j>=0 and listNumber[j] > key:
+#             listNumber[j+1] = listNumber[j]
+#             j -=1
+#         listNumber[j+1] = key
+#     return listNumber
+
+# listNumber = [1,4,14,2,15,8,16,5,17,7,18,12,19,9,20,10,3,13,6,11]
+# print(fn_insertion_sort(listNumber))
+def merge_sort(listNumber):
+    if len(listNumber) > 1:
+        mid = len(listNumber)//2
+        left_half = listNumber[:mid:]
+        right_half=listNumber[mid:]
+        merge_sort(left_half)
+        merge_sort(right_half)
+        i=j=k=0
+        while i < len(left_half) and j < len(right_half):
+            if left_half[i] < right_half[j]:
+                listNumber[k] = left_half[i]
+                i+=1
+            else:
+                listNumber[k] = right_half[j]
+                j+=1
+            k+=1
+        while i < len(left_half):
+            listNumber[k] = left_half[i]
+            i+=1
+            k+=1
+        while j < len(right_half):
+            listNumber[k]=right_half[j]
+            j+=1
+            k+=1
+
+
+
+listNumber=[1,4,14,2,15,8,16,5,17,7,18,12,19,9,20,10,3,13,6,11]
+merge_sort(listNumber)
+print(listNumber)
