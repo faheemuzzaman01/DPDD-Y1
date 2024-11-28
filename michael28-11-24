@@ -1,0 +1,171 @@
+# def bubble(array):
+    
+#     for n in range (len(array) - 1, 0, -1):
+#         swapped = False
+#         for i in range(n):
+#             if array[i] > array[i + 1]:
+#                 array[i], array[i + 1] = array[i + 1], array[i]
+#                 swapped = True
+#     if not swapped:
+#         return
+# array = [64, 34, 25, 12,22, 11, 90]        
+# bubble(array)
+# print("sorted array is:")
+# for i in range(len(array)):
+#     print("%d"% array[i], end= " ")
+#insertion
+# def insert(arr):
+#     n = len(arr)
+#     if n <= 1:
+#         return
+#     for i in range(1, n):
+#         key = arr[i]
+#         j = i - 1
+#         while j >= 0 and key < arr[j]:
+#             arr[j + 1] = arr[j]
+#             j -= 1
+#         arr[j + 1] = key
+# arr = [12, 11, 13, 5, 6]
+# insert(arr)
+# print(arr)
+#ffffff
+# Python program for implementation of MergeSort
+
+# Merges two subarrays of arr[].
+# First subarray is arr[l..m]
+# Second subarray is arr[m+1..r]
+
+
+def merge(arr, l, m, r):
+	n1 = m - l + 1
+	n2 = r - m
+
+	# create temp arrays
+	L = [0] * (n1)
+	R = [0] * (n2)
+
+	# Copy data to temp arrays L[] and R[]
+	for i in range(0, n1):
+		L[i] = arr[l + i]
+
+	for j in range(0, n2):
+		R[j] = arr[m + 1 + j]
+
+	# Merge the temp arrays back into arr[l..r]
+	i = 0	 # Initial index of first subarray
+	j = 0	 # Initial index of second subarray
+	k = l	 # Initial index of merged subarray
+
+	while i < n1 and j < n2:
+		if L[i] <= R[j]:
+			arr[k] = L[i]
+			i += 1
+		else:
+			arr[k] = R[j]
+			j += 1
+		k += 1
+
+	# Copy the remaining elements of L[], if there
+	# are any
+	while i < n1:
+		arr[k] = L[i]
+		i += 1
+		k += 1
+
+	# Copy the remaining elements of R[], if there
+	# are any
+	while j < n2:
+		arr[k] = R[j]
+		j += 1
+		k += 1
+
+# l is for left index and r is right index of the
+# sub-array of arr to be sorted
+
+
+def mergeSort(arr, l, r):
+	if l < r:
+
+		# Same as (l+r)//2, but avoids overflow for
+		# large l and h
+		m = l+(r-l)//2
+
+		# Sort first and second halves
+		mergeSort(arr, l, m)
+		mergeSort(arr, m+1, r)
+		merge(arr, l, m, r)
+
+
+# Driver code to test above
+arr = [12, 11, 13, 5, 6, 7]
+n = len(arr)
+print("Given array is")
+for i in range(n):
+	print("%d" % arr[i],end=" ")
+
+mergeSort(arr, 0, n-1)
+print("\n\nSorted array is")
+for i in range(n):
+	print("%d" % arr[i],end=" ")
+
+def merge(lst):
+    if len(lst) > 1:
+        mid = len(lst) // 2
+        left = lst[:mid:]
+        right = lst[mid:]
+        merge(left)
+        merge(right)
+        i = j = k = 0
+        while i < len(left) and j < len(right):
+            if left[i] < right[j]:
+                lst[k] = left[i]
+                i += 1
+            else:
+                lst[k] = right[j]
+                j += 1
+            k += 1
+        while i < len(left):
+            lst = left[i]
+            i += 1
+            k += 1
+        while j < len(right):
+            lst[k] = right[j]
+            j += 1
+            k += 1
+print(merge([3, 1, 5, 8, 7, 6]))
+# def binary():
+#     print("Think of  anumber from 1 - 100")
+#     low = 0 
+#     high = 100
+#     attempt = 0 
+#     while low <= high:
+#         attempt +=1
+#         guess = ( low + high)//2
+#         print("My guess", guess)
+#         feedback = input("""
+#     it is correct (c)
+#     too high (h)
+#     too low (l)
+# """) 
+#         if feedback == "c":
+#             print(f"I guessed the number in {attempt}")
+#             break
+#         elif feedback == "l":
+#             high = guess - 1
+#         elif feedback == "h":
+#             low = guess + 1
+#         else:
+#             print("invalid input")
+#     print("something is wrong")
+# binary()
+def fn_insertion_sort(listNumber):
+    for i in range(1, len(listNumber)):
+        key = listNumber[i]
+        j = i - 1
+        while j >= 0 and listNumber[j] > key:
+            listNumber[j + 1] = listNumber[j]
+            j -= 1
+            listNumber[j + 1] = key
+            return listNumber
+listNumber = [ 3, 4, 8, 5]
+print(fn_insertion_sort(listNumber))
