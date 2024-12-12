@@ -1,0 +1,39 @@
+import pandas as pd
+import numpy as np
+
+# s = pd.Series([10, 20, 30, 50])
+# print(s)
+# DF01 = pd.DataFrame({
+#   "name": ["Aan", "Can", "dim"],
+#   "age": [20, 30, 40],
+#   "email": ["ejeyd@example.com", "ejeyd@example.com", "ejeyd@example.com"],
+#   "phone number": ["+90 555 555 555", "+90 555 555 555", "+90 555 555"],
+#   "address": ["İstanbul", "İstanbul", "İstanbul"],
+#   "city": ["İstanbul", "İstanbul", "İstanbul"],
+
+# })
+# print(DF01)
+df = pd.read_csv("customers-100(1).csv", header=None, names=['Customer Id'])
+print(df)
+import pandas as pd
+import numpy as np
+
+# s = pd.Series([10, 20, 30, 50])
+# print(s)
+# DF01 = pd.DataFrame({
+#   "name": ["Aan", "Can", "dim"],
+#   "age": [20, 30, 40],
+#   "email": ["ejeyd@example.com", "ejeyd@example.com", "ejeyd@example.com"],
+#   "phone number": ["+90 555 555 555", "+90 555 555 555", "+90 555 555"],
+#   "address": ["İstanbul", "İstanbul", "İstanbul"],
+#   "city": ["İstanbul", "İstanbul", "İstanbul"],
+
+# })
+# print(DF01)
+# series01 = pd.Series([10, 20, 30, 50])
+# series02 = pd.Series([1, 2, 3, 5])
+# result = series01 + series02
+# print(result)
+df = pd.read_csv("data.csv", header=None, names=['Customer Id'])
+print(df)
+print(df.index)  
